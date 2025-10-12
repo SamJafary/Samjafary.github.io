@@ -1,103 +1,12 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محلی برای شناخت دقیق بازتاب ذهن من</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .tagline {
-            color: #7f8c8d;
-            font-size: 1.2em;
-            font-style: italic;
-        }
-        
-        .intro {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            border-right: 5px solid #3498db;
-        }
-        
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
-        }
-        
-        .category {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .category:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            border-radius: 15px;
-        }
-        
-        .telegram-link {
-            display: inline-block;
-            background: #0088cc;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+li><a href="#portfolio">نمونه کارها</a></li>
+                <li><a href="#about">درباره من</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- محتوای اصلی -->
+    <div class="container" id="home">
         <header>
             <h1>سام جعفری | Sam Jafary</h1>
             <p class="tagline">محلی برای شناخت دقیق بازتاب ذهن من</p>
@@ -105,26 +14,36 @@
         
         <section class="intro">
             <h2>سلام، من سام هستم</h2>
-            <p>طراح، ایده‌پرداز و عاشق خلق کردن سناریو. دنیای من پر از طرح‌ها و سناریو هاییست که از دل خلاقیت بیرون میان و با جزئیات، داستان خودشان رو تعریف می‌کنند.</p>
+            <p>طراح، ایده‌پرداز و عاشق خلق کردن سناریو. دنیای من پر از طرح‌ها و سناریو هاییست که از دل خلاقیت بیرون میان و با جزئیات، داستان خودشان رو تعریف می‌کنند. اینجا جاییه که می‌تونی بخشی از مسیر من رو ببینی ، از پروژه‌های شخصی گرفته تا همکاری‌های حرفه‌ای. هر نمونه‌کار، یه تجربه‌ست؛ هر طرح، یه نگاه تازه. خوش اومدی به دنیای من.</p>
         </section>
         
         <section class="skills">
             <h2>حوزه‌های تخصصی</h2>
             <div class="categories">
-                <div class="category">سناریو نویسی<br><small>Screenwriting</small></div>
-                <div class="category">ایده پردازی<br><small>Ideation</small></div>
-                <div class="category">طراحی لوگو<br><small>Logo Design</small></div>
-                <div class="category">طراحی بنر<br><small>Banner Design</small></div>
-                <div class="category">طراحی لیبل<br><small>Label Design</small></div>
-                <div class="category">طراحی پروفایل<br><small>Profile Design</small></div>
-                <div class="category">طراحی کاور<br><small>Cover Design</small></div>
+                <div class="category" onclick="showCategory('بنر')">طراحی بنر</div>
+                <div class="category" onclick="showCategory('لوگو')">طراحی لوگو</div>
+                <div class="category" onclick="showCategory('لیبل')">طراحی لیبل</div>
+                <div class="category" onclick="showCategory('پروفایل')">طراحی پروفایل</div>
+                <div class="category" onclick="showCategory('کاور')">طراحی کاور</div>
+                <div class="category" onclick="showCategory('سناریو')">سناریو نویسی</div>
+                <div class="category" onclick="showCategory('ایده')">ایده پردازی</div>
             </div>
         </section>
         
-        <section class="contact">
+        <section class="contact" id="contact">
             <h2>بیا در تماس باشیم</h2>
-            <a href="https://t.me/samjafary" class="telegram-link">پیام به @samjafary</a>
+            <p>برای همکاری و گفتگو، از طریق تلگرام در ارتباط باش</p>
+            <a href="https://t.me/samjafary" class="telegram-link" target="_blank">
+                پیام به @samjafary
+            </a>
         </section>
     </div>
+
+    <script>
+        function showCategory(category) {
+            alert('به زودی صفحه ' + category + ' اضافه خواهد شد!');
+            // اینجا بعداً به صفحه نمونه کارها لینک می‌دهیم
+        }
+    </script>
 </body>
 </html>
