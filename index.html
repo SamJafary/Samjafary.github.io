@@ -27,7 +27,6 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
         }
         
         header {
@@ -57,11 +56,6 @@
             border-right: 5px solid #3498db;
         }
         
-        .intro h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        
         .categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -76,18 +70,10 @@
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .category.en {
-            font-size: 0.9em;
-            opacity: 0.8;
-            margin-top: 5px;
         }
         
         .contact {
@@ -107,25 +93,6 @@
             border-radius: 25px;
             text-decoration: none;
             margin-top: 10px;
-            transition: background 0.3s ease;
-        }
-        
-        .telegram-link:hover {
-            background: #0077b3;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
-            }
-            
-            .categories {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -138,9 +105,26 @@
         
         <section class="intro">
             <h2>سلام، من سام هستم</h2>
-            <p>طراح، ایده‌پرداز و عاشق خلق کردن سناریو. دنیای من پر از طرح‌ها و سناریو هاییست که از دل خلاقیت بیرون میان و با جزئیات، داستان خودشان رو تعریف می‌کنند. اینجا جاییه که می‌تونی بخشی از مسیر من رو ببینی ، از پروژه‌های شخصی گرفته تا همکاری‌های حرفه‌ای. هر نمونه‌کار، یه تجربه‌ست؛ هر طرح، یه نگاه تازه. خوش اومدی به دنیای من.</p>
+            <p>طراح، ایده‌پرداز و عاشق خلق کردن سناریو. دنیای من پر از طرح‌ها و سناریو هاییست که از دل خلاقیت بیرون میان و با جزئیات، داستان خودشان رو تعریف می‌کنند.</p>
         </section>
         
         <section class="skills">
             <h2>حوزه‌های تخصصی</h2>
-            <d
+            <div class="categories">
+                <div class="category">سناریو نویسی<br><small>Screenwriting</small></div>
+                <div class="category">ایده پردازی<br><small>Ideation</small></div>
+                <div class="category">طراحی لوگو<br><small>Logo Design</small></div>
+                <div class="category">طراحی بنر<br><small>Banner Design</small></div>
+                <div class="category">طراحی لیبل<br><small>Label Design</small></div>
+                <div class="category">طراحی پروفایل<br><small>Profile Design</small></div>
+                <div class="category">طراحی کاور<br><small>Cover Design</small></div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>بیا در تماس باشیم</h2>
+            <a href="https://t.me/samjafary" class="telegram-link">پیام به @samjafary</a>
+        </section>
+    </div>
+</body>
+</html>
