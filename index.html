@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>سام جعفری | Sam Jafary</title>
     <style>
-        /* ریست کردن استایل ها */
         * {
             margin: 0;
             padding: 0;
@@ -13,7 +12,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* استایل نوار导航 */
+        /* نوار导航 */
         .navbar {
             background: #2c3e50;
             padding: 1rem 0;
@@ -42,24 +41,27 @@
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .nav-menu a {
             color: white;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
         }
         
         .nav-menu a:hover {
-            color: #3498db;
+            background: rgba(106, 27, 154, 0.3);
+            color: #e1bee7;
         }
 
-        /* استایل بدنه */
+        /* بدنه */
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%);
+            color: #e1bee7;
             line-height: 1.6;
             padding-top: 80px;
             min-height: 100vh;
@@ -68,37 +70,34 @@
         .container {
             max-width: 1000px;
             margin: 20px auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: #000000;
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
         
         header {
             text-align: center;
             margin-bottom: 40px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #6a1b9a;
             padding-bottom: 20px;
         }
         
         h1 {
-            color: #2c3e50;
+            color: #e1bee7;
             font-size: 2.5em;
             margin-bottom: 10px;
         }
         
-        .tagline {
-            color: #7f8c8d;
-            font-size: 1.2em;
-            font-style: italic;
+        h2 {
+            color: #e1bee7;
+            margin-bottom: 20px;
         }
         
-        .intro {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            border-right: 5px solid #3498db;
+        .tagline {
+            color: #ba68c8;
+            font-size: 1.2em;
+            font-style: italic;
         }
         
         .categories {
@@ -109,17 +108,19 @@
         }
         
         .category {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, #6a1b9a, #8e24aa);
             color: white;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s ease;
             cursor: pointer;
+            border: 2px solid #ba68c8;
         }
         
         .category:hover {
             transform: translateY(-5px);
+            background: linear-gradient(135deg, #8e24aa, #ab47bc);
         }
         
         .contact {
@@ -129,19 +130,24 @@
             background: #2c3e50;
             color: white;
             border-radius: 15px;
+            border: 2px solid #6a1b9a;
         }
         
         .telegram-link {
             display: inline-block;
-            background: #0088cc;
+            background: #6a1b9a;
             color: white;
             padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+        
+        .telegram-link:hover {
+            background: #8e24aa;
         }
 
-        /* رسپانسیو */
         @media (max-width: 768px) {
             .nav-menu {
                 gap: 1rem;
@@ -179,11 +185,6 @@
             <p class="tagline">محلی برای شناخت دقیق بازتاب ذهن من</p>
         </header>
         
-        <section class="intro">
-            <h2>سلام، من سام هستم</h2>
-            <p>طراح، ایده‌پرداز و عاشق خلق کردن سناریو. دنیای من پر از طرح‌ها و سناریو هاییست که از دل خلاقیت بیرون میان و با جزئیات، داستان خودشان رو تعریف می‌کنند. اینجا جاییه که می‌تونی بخشی از مسیر من رو ببینی ، از پروژه‌های شخصی گرفته تا همکاری‌های حرفه‌ای. هر نمونه‌کار، یه تجربه‌ست؛ هر طرح، یه نگاه تازه. خوش اومدی به دنیای من.</p>
-        </section>
-        
         <section class="skills">
             <h2>حوزه‌های تخصصی</h2>
             <div class="categories">
@@ -194,6 +195,7 @@
                 <div class="category">طراحی کاور</div>
                 <div class="category">سناریو نویسی</div>
                 <div class="category">ایده پردازی</div>
+                <div class="category">سناریو تبلیغات</div>
             </div>
         </section>
         
@@ -207,7 +209,6 @@
     </div>
 
     <script>
-        // اضافه کردن کلیک به دسته بندی ها
         document.querySelectorAll('.category').forEach(item => {
             item.addEventListener('click', function() {
                 const categoryName = this.textContent;
