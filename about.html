@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>درباره من | سام جعفری</title>
     
-    <!-- لینک فونت Vazir -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css">
     
     <style>
@@ -16,7 +15,6 @@
             font-family: Vazir, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        /* نوار导航 - هماهنگ با صفحه اصلی */
         .navbar {
             background: #2c3e50;
             padding: 0.5rem 0;
@@ -91,7 +89,6 @@
             color: #e1bee7;
         }
 
-        /* بدنه */
         body {
             background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%);
             color: #e1bee7;
@@ -109,6 +106,7 @@
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            min-height: calc(100vh - 150px);
         }
         
         header {
@@ -132,6 +130,12 @@
             font-weight: 600;
             font-size: 1.4em;
             text-align: center;
+        }
+        
+        .tagline {
+            color: #ba68c8;
+            font-size: 0.95em;
+            font-style: italic;
         }
         
         .about-content {
@@ -167,7 +171,37 @@
             background: #8e24aa;
         }
 
-        /* رسپانسیو */
+        .site-footer {
+            background: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 2px solid #6a1b9a;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .footer-content p {
+            color: #ba68c8;
+            font-size: 0.9em;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .site-footer {
+                padding: 15px 0;
+            }
+            
+            .footer-content p {
+                font-size: 0.8em;
+                line-height: 1.4;
+            }
+        }
+
         @media (min-width: 768px) {
             body {
                 font-size: 16px;
@@ -210,7 +244,6 @@
     </style>
 </head>
 <body>
-    <!-- نوار بالای سایت -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo-section">
@@ -225,12 +258,11 @@
                 <li><a href="index.html">خانه</a></li>
                 <li><a href="#portfolio">نمونه کارها</a></li>
                 <li><a href="about.html">درباره من</a></li>
-                <li><a href="#contact">تماس</a></li>
+                <li><a href="contact.html">تماس</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- محتوای اصلی -->
     <div class="container">
         <header>
             <h1>درباره من</h1>
@@ -251,5 +283,11 @@
             </div>
         </section>
     </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>ساخت و توسعه توسط سام جعفری | Designed and Developed by Sam Jafary</p>
+        </div>
+    </footer>
 </body>
 </html>
