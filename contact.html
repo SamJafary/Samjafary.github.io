@@ -131,28 +131,18 @@
             text-align: center;
         }
         
+        .tagline {
+            color: #ba68c8;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        
         .contact-methods {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-}
-
-@media (max-width: 480px) {
-    .contact-methods {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
-    .contact-card {
-        padding: 20px 15px;
-    }
-    
-    .contact-info {
-        font-size: 1em;
-        word-break: break-all;
-    }
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
         
         .contact-card {
             background: rgba(42, 42, 42, 0.8);
@@ -176,6 +166,8 @@
         .contact-info {
             font-size: 1.1em;
             margin: 10px 0;
+            direction: ltr;
+            text-align: center;
         }
         
         .contact-link {
@@ -187,6 +179,7 @@
             text-decoration: none;
             margin-top: 10px;
             transition: background 0.3s ease;
+            font-size: 0.9em;
         }
         
         .contact-link:hover {
@@ -207,6 +200,27 @@
         
         .back-link:hover {
             background: #8e24aa;
+        }
+
+        /* رسپانسیو برای موبایل */
+        @media (max-width: 480px) {
+            .contact-methods {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .contact-card {
+                padding: 20px 15px;
+            }
+            
+            .contact-info {
+                font-size: 1em;
+                word-break: break-all;
+            }
+            
+            .contact-icon {
+                font-size: 2em;
+            }
         }
 
         @media (min-width: 768px) {
