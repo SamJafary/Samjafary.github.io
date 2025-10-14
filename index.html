@@ -310,6 +310,66 @@
                 padding: 12px 8px;
                 min-height: 60px;
             }
+            /* استایل Tooltip */
+.category {
+    position: relative;
+    cursor: pointer;
+}
+
+.category::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 1px solid #6a1b9a;
+}
+
+.category::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.category:hover::after,
+.category:hover::before {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 10px);
+}
+
+/* برای موبایل */
+@media (max-width: 768px) {
+    .category::after {
+        white-space: normal;
+        width: 200px;
+        text-align: center;
+    }
+    
+    .category:active::after,
+    .category:active::before {
+        opacity: 1;
+        visibility: visible;
+        bottom: calc(100% + 10px);
+    }
+}
         }
     </style>
 </head>
@@ -344,16 +404,16 @@
         
         <section class="skills">
             <h2>حوزه‌های تخصصی</h2>
-            <div class="categories">
-                <div class="category">طراحی بنر</div>
-                <div class="category">طراحی لوگو</div>
-                <div class="category">طراحی لیبل</div>
-                <div class="category">طراحی پروفایل</div>
-                <div class="category">طراحی کاور</div>
-                <div class="category">سناریو نویسی</div>
-                <div class="category">ایده پردازی</div>
-                <div class="category">سناریو تبلیغات</div>
-            </div>
+           <div class="categories">
+    <div class="category" data-tooltip="طراحی بنرهای تبلیغاتی برای شبکه‌های اجتماعی و وبسایت‌ها">طراحی بنر</div>
+    <div class="category" data-tooltip="طراحی لوگو و هویت بصری برای برندها و کسب‌وکارها">طراحی لوگو</div>
+    <div class="category" data-tooltip="طراحی لیبل و بسته‌بندی برای محصولات مختلف">طراحی لیبل</div>
+    <div class="category" data-tooltip="طراحی پروفایل حرفه‌ای برای شبکه‌های اجتماعی">طراحی پروفایل</div>
+    <div class="category" data-tooltip="طراحی کاور و پوستر برای کتاب، موزیک و محتوا">طراحی کاور</div>
+    <div class="category" data-tooltip="نوشتن سناریوهای خلاقانه برای فیلم، ویدیو و محتوا">سناریو نویسی</div>
+    <div class="category" data-tooltip="ایده‌پردازی و توسعه کانسپت‌های خلاقانه برای پروژه‌ها">ایده پردازی</div>
+    <div class="category" data-tooltip="نوشتن سناریوهای تبلیغاتی مؤثر برای کمپین‌های بازاریابی">سناریو تبلیغات</div>
+</div>
         </section>
         
     </div>
@@ -366,5 +426,37 @@
             });
         });
     </script>
+    document.querySelectorAll('.category').forEach(item => {
+    let tooltipTimeout;
+    
+    item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const tooltip = this.getAttribute('data-tooltip');
+            alert(tooltip);
+        }
+    });
+    
+    item.addEventListener('touchstart', function() {
+        if (window.innerWidth <= 768) {
+            tooltipTimeout = setTimeout(() => {
+                const tooltip = this.getAttribute('data-tooltip');
+                alert(tooltip);
+            }, 500);
+        }
+    });
+    
+    item.addEventListener('touchend', function() {
+        clearTimeout(tooltipTimeout);
+    });
+    
+    // برای دسکتاپ - رفتن به صفحه نمونه کارها
+    item.addEventListener('click', function(e) {
+        if (window.innerWidth > 768) {
+            const categoryName = this.textContent;
+            alert('صفحه ' + categoryName + ' به زودی اضافه می‌شود!');
+        }
+    });
+});
 </body>
 </html>
