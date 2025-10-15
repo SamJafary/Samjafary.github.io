@@ -10,52 +10,53 @@
         body { 
             background: linear-gradient(rgba(74,20,140,0.85), rgba(106,27,154,0.85)), url('background.jpg') center/cover fixed;
             color: #e1bee7; line-height: 1.7; min-height: 100vh; font-weight: 300; 
+            padding-top: 80px;
         }
-        /* دسکتاپ */
-        @media (min-width: 1025px) {
-            body { padding-top: 80px; font-size: 16px; }
-            .navbar { background: #2c3e50; padding: 1rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; }
-            .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; }
-            .logo-section { display: flex; align-items: center; gap: 15px; }
-            .profile-img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid #6a1b9a; }
-            .logo-name { color: white; font-size: 1.4em; font-weight: bold; }
-            .logo-title { color: #ba68c8; font-size: 0.9em; margin-top: 3px; }
-            .nav-menu { display: flex; list-style: none; gap: 2rem; }
-            .nav-menu a { color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-size: 1em; }
-            .nav-menu a:hover { background: rgba(106,27,154,0.3); }
-            .container { max-width: 900px; margin: 25px auto; background: #000; border-radius: 20px; padding: 45px; }
-            h1 { color: #e1bee7; font-size: 2.5em; margin-bottom: 12px; }
-            .contact-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 35px 0; }
-            .contact-card { background: rgba(42,42,42,0.9); padding: 35px 25px; border-radius: 15px; text-align: center; border: 2px solid #6a1b9a; transition: all 0.3s ease; min-height: 250px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-            .contact-card:hover { transform: translateY(-8px); border-color: #ba68c8; }
-            .contact-icon { font-size: 3em; margin-bottom: 20px; }
-            .contact-info { font-size: 1.2em; margin: 15px 0; direction: ltr; text-align: center; word-break: break-all; }
-            .contact-link, .back-link { background: #6a1b9a; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; transition: background 0.3s ease; font-weight: 500; }
-            .contact-link:hover, .back-link:hover { background: #8e24aa; }
-            .site-footer { background: #1a1a1a; padding: 25px 0; text-align: center; border-top: 2px solid #6a1b9a; margin-top: 40px; }
-        }
-        /* موبایل */
-        @media (max-width: 1024px) {
+        
+        .navbar { background: #2c3e50; padding: 1rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; }
+        .logo-section { display: flex; align-items: center; gap: 15px; }
+        .profile-img { width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid #6a1b9a; }
+        .logo-name { color: white; font-size: 1.4em; font-weight: bold; }
+        .logo-title { color: #ba68c8; font-size: 0.9em; margin-top: 3px; }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; }
+        .nav-menu a { color: white; text-decoration: none; padding: 10px 20px; border-radius: 25px; font-size: 1em; }
+        .nav-menu a:hover { background: rgba(106,27,154,0.3); }
+        
+        .container { max-width: 900px; margin: 25px auto; background: rgba(0,0,0,0.8); border-radius: 20px; padding: 45px; }
+        h1 { color: #e1bee7; font-size: 2.5em; margin-bottom: 12px; text-align: center; }
+        .tagline { color: #ba68c8; font-size: 1.2em; font-style: italic; text-align: center; }
+        
+        .contact-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin: 35px 0; }
+        .contact-card { background: rgba(42,42,42,0.9); padding: 35px 25px; border-radius: 15px; text-align: center; border: 2px solid #6a1b9a; transition: all 0.3s ease; }
+        .contact-card:hover { transform: translateY(-8px); border-color: #ba68c8; }
+        .contact-icon { font-size: 3em; margin-bottom: 20px; }
+        .contact-info { font-size: 1.2em; margin: 15px 0; direction: ltr; text-align: center; word-break: break-all; }
+        .contact-link, .back-link { background: #6a1b9a; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; transition: background 0.3s ease; }
+        .contact-link:hover, .back-link:hover { background: #8e24aa; }
+        
+        .site-footer { background: #1a1a1a; padding: 25px 0; text-align: center; border-top: 2px solid #6a1b9a; margin-top: 40px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; }
+        .footer-content p { color: #ba68c8; font-size: 1em; margin: 0; }
+
+        @media (max-width: 768px) {
             body { padding-top: 120px; font-size: 14px; }
-            .navbar { background: rgba(44,62,80,0.98); padding: 0.8rem 0; }
             .nav-container { flex-direction: column; gap: 12px; padding: 0 15px; }
             .profile-img { width: 45px; height: 45px; }
             .logo-name { font-size: 1.2em; }
             .logo-title { font-size: 0.8em; }
             .nav-menu { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; width: 100%; }
-            .nav-menu a { padding: 8px 5px; border-radius: 15px; font-size: 0.8em; background: rgba(106,27,154,0.4); text-align: center; min-height: 35px; }
-            .container { max-width: 95%; margin: 15px auto; background: rgba(0,0,0,0.85); padding: 20px; }
-            h1 { font-size: 1.6em; }
+            .nav-menu a { padding: 8px 5px; font-size: 0.8em; background: rgba(106,27,154,0.4); text-align: center; min-height: 35px; }
+            .container { max-width: 95%; padding: 20px; margin: 15px auto; }
+            h1 { font-size: 1.8em; }
             .contact-methods { grid-template-columns: 1fr; gap: 15px; }
-            .contact-card { padding: 25px 15px; min-height: 200px; }
-            .contact-icon { font-size: 2.5em; margin-bottom: 15px; }
+            .contact-card { padding: 25px 15px; }
+            .contact-icon { font-size: 2.5em; }
             .contact-info { font-size: 1em; }
             .contact-link, .back-link { padding: 10px 20px; font-size: 0.9em; }
-            .site-footer { background: rgba(26,26,26,0.95); padding: 18px 0; margin-top: 25px; }
+            .site-footer { padding: 18px 0; margin-top: 25px; }
+            .footer-content p { font-size: 0.8em; }
         }
-        .footer-content { max-width: 1200px; margin: 0 auto; }
-        .footer-content p { color: #ba68c8; font-size: 0.9em; margin: 0; }
-        @media (max-width: 768px) { .footer-content p { font-size: 0.8em; } }
     </style>
 </head>
 <body>
