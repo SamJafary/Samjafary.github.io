@@ -103,7 +103,7 @@ body {
     color: #e1bee7;
 }
 
-/* محتوای اصلی */
+/* استایل‌های عمومی */
 .container {
     max-width: 1100px;
     margin: 30px auto;
@@ -134,12 +134,20 @@ h2 {
     font-size: 1.8em;
 }
 
+h3 {
+    color: #e1bee7;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
 .tagline {
     color: #ba68c8;
     font-size: 1.3em;
     font-style: italic;
 }
 
+/* استایل‌های صفحه اصلی */
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -209,6 +217,95 @@ h2 {
     opacity: 1;
     visibility: visible;
     bottom: calc(100% + 15px);
+}
+
+/* استایل‌های صفحه تماس */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 35px 0;
+}
+
+.contact-card {
+    background: rgba(42, 42, 42, 0.9);
+    padding: 35px 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #6a1b9a;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: #ba68c8;
+}
+
+.contact-icon {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    margin: 15px 0;
+    direction: ltr;
+    text-align: center;
+    word-break: break-all;
+}
+
+.contact-link {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.contact-link:hover {
+    background: #8e24aa;
+}
+
+.back-link {
+    display: inline-block;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.back-link:hover {
+    background: #8e24aa;
+}
+
+/* استایل‌های صفحه درباره من */
+.about-content {
+    background: rgba(42, 42, 42, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    border-right: 4px solid #6a1b9a;
+    line-height: 1.9;
+}
+
+.about-content p {
+    margin-bottom: 25px;
+    text-align: justify;
+    font-size: 1.05em;
+    color: #e1bee7;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
 }
 
 /* فوتر */
@@ -317,6 +414,10 @@ h2 {
         font-size: 1.4em;
     }
     
+    h3 {
+        font-size: 1.1em;
+    }
+    
     .tagline {
         font-size: 1em;
     }
@@ -338,6 +439,37 @@ h2 {
         text-align: center;
         font-size: 0.8em;
         padding: 12px 15px;
+    }
+    
+    .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contact-card {
+        padding: 25px 15px;
+    }
+    
+    .contact-icon {
+        font-size: 2.5em;
+    }
+    
+    .contact-info {
+        font-size: 1em;
+    }
+    
+    .contact-link, .back-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .about-content {
+        padding: 25px;
+        line-height: 1.8;
+    }
+    
+    .about-content p {
+        font-size: 0.95em;
     }
     
     .site-footer {
