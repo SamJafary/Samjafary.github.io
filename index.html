@@ -15,31 +15,21 @@
 
         /* بنر ایران */
         .iran-banner {
-            background: linear-gradient(90deg, white 33%, #239F40 33%, #239F40 66%, white 66%);
+            background: linear-gradient(90deg, #239F40 33%, white 33%, white 66%, #CE1126 66%);
             color: black;
             text-align: center;
-            padding: 12px 0;
+            padding: 15px 0;
             font-weight: 900;
-            font-size: 1.2em;
+            font-size: 1.4em;
             position: relative;
             direction: rtl;
             border-bottom: 3px solid #daa520;
         }
 
         .iran-banner-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        .faravahar-icon {
-            width: 28px;
-            height: 28px;
-            filter: brightness(0);
         }
 
         /* نوار导航 */
@@ -259,18 +249,12 @@
         /* موبایل */
         @media (max-width: 768px) {
             .iran-banner {
-                padding: 10px 0;
-                font-size: 1em;
+                padding: 12px 0;
+                font-size: 1.1em;
             }
             
             .iran-banner-content {
-                gap: 12px;
                 padding: 0 15px;
-            }
-            
-            .faravahar-icon {
-                width: 22px;
-                height: 22px;
             }
             
             .navbar {
@@ -383,13 +367,7 @@
     <!-- بنر ایران -->
     <div class="iran-banner">
         <div class="iran-banner-content">
-            <svg class="faravahar-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L4 7V22H20V7L12 2Z M12 11L14 13L12 15L10 13L12 11Z M8 17H16V19H8V17Z"/>
-            </svg>
-            <span>چو ایران نباشد تن من مباد</span>
-            <svg class="faravahar-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L4 7V22H20V7L12 2Z M12 11L14 13L12 15L10 13L12 11Z M8 17H16V19H8V17Z"/>
-            </svg>
+            چو ایران نباشد تن من مباد
         </div>
     </div>
 
