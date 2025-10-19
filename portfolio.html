@@ -120,6 +120,7 @@
             font-size: 0.9em;
             flex: 1;
             text-align: center;
+            cursor: pointer;
         }
         
         .portfolio-link:hover {
@@ -138,6 +139,54 @@
             font-size: 0.8em;
             font-weight: 600;
             z-index: 2;
+        }
+
+        /* مودال برای نمایش جزئیات */
+        .portfolio-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: rgba(42, 42, 42, 0.95);
+            border: 2px solid #6a1b9a;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #6a1b9a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
         
         /* موبایل */
@@ -158,6 +207,11 @@
             
             .portfolio-item:hover {
                 transform: translateY(-8px);
+            }
+
+            .modal-content {
+                padding: 20px;
+                width: 95%;
             }
         }
     </style>
@@ -218,7 +272,7 @@
                         <span class="tech-tag">طراحی لوگو</span>
                     </div>
                     <div class="portfolio-links">
-                        <a href="#" class="portfolio-link">مشاهده جزئیات</a>
+                        <a class="portfolio-link view-details" data-project="1">مشاهده جزئیات</a>
                     </div>
                 </div>
             </div>
@@ -235,7 +289,7 @@
                         <span class="tech-tag">داستان‌سرایی</span>
                     </div>
                     <div class="portfolio-links">
-                        <a href="#" class="portfolio-link">خواندن سناریو</a>
+                        <a class="portfolio-link view-details" data-project="2">خواندن سناریو</a>
                     </div>
                 </div>
             </div>
@@ -252,9 +306,19 @@
                         <span class="tech-tag">کانسپت</span>
                     </div>
                     <div class="portfolio-links">
-                        <a href="#" class="portfolio-link">مشاهده ایده</a>
+                        <a class="portfolio-link view-details" data-project="3">مشاهده ایده</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال نمایش جزئیات -->
+    <div id="portfolioModal" class="portfolio-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div id="modalContent">
+                <!-- محتوای مودال اینجا لود میشه -->
             </div>
         </div>
     </div>
@@ -272,12 +336,15 @@
         document.addEventListener('DOMContentLoaded', function() {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const portfolioItems = document.querySelectorAll('.portfolio-item');
+            const viewDetailsBtns = document.querySelectorAll('.view-details');
+            const modal = document.getElementById('portfolioModal');
+            const closeModal = document.querySelector('.close-modal');
+            const modalContent = document.getElementById('modalContent');
             
+            // فیلترینگ
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    // حذف کلاس active از همه دکمه‌ها
                     filterBtns.forEach(b => b.classList.remove('active'));
-                    // اضافه کردن کلاس active به دکمه کلیک شده
                     this.classList.add('active');
                     
                     const filter = this.getAttribute('data-filter');
@@ -299,6 +366,88 @@
                     });
                 });
             });
+            
+            // نمایش جزئیات نمونه کارها
+            viewDetailsBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    showProjectDetails(projectId);
+                });
+            });
+            
+            // بستن مودال
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            // بستن مودال با کلیک خارج از آن
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // تابع نمایش جزئیات پروژه
+            function showProjectDetails(projectId) {
+                let content = '';
+                
+                switch(projectId) {
+                    case '1':
+                        content = `
+                            <h2>طراحی لوگو برند ورزشی</h2>
+                            <img src="design-sample.jpg" alt="طراحی لوگو" class="modal-image">
+                            <p><strong>توضیحات کامل:</strong></p>
+                            <p>طراحی هویت بصری کامل برای یک برند ورزشی نوپا. این پروژه شامل طراحی لوگو، پالت رنگی، تایپوگرافی و راهنمای برند بود.</p>
+                            <p><strong>چالش‌ها:</strong> ترکیب المان‌های سنتی ورزشی با طراحی مدرن</p>
+                            <p><strong>راه‌حل:</strong> استفاده از فرم‌های داینامیک و رنگ‌های پرانرژی</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">فتوشاپ</span>
+                                <span class="tech-tag">ایلوستریتور</span>
+                                <span class="tech-tag">طراحی لوگو</span>
+                            </div>
+                        `;
+                        break;
+                    case '2':
+                        content = `
+                            <h2>سناریو تبلیغاتی کافه</h2>
+                            <p><strong>توضیحات کامل:</strong></p>
+                            <p>نوشتن سناریوی ۶۰ ثانیه‌ای برای تبلیغات یک کافه مدرن با رویکرد داستان‌محور. سناریو بر روی تجربه مشتری و فضای منحصر به فرد کافه تمرکز دارد.</p>
+                            <p><strong>سکانس‌ها:</strong></p>
+                            <ul>
+                                <li>صحنه افتتاحیه: نمای بیرون کافه</li>
+                                <li>صحنه میانی: تعامل کارکنان با مشتری</li>
+                                <li>صحنه پایانی: لحظه لذت بردن از قهوه</li>
+                            </ul>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">سناریونویسی</span>
+                                <span class="tech-tag">تبلیغات</span>
+                                <span class="tech-tag">داستان‌سرایی</span>
+                            </div>
+                        `;
+                        break;
+                    case '3':
+                        content = `
+                            <h2>کانسپت برندینگ رستوران</h2>
+                            <p><strong>توضیحات کامل:</strong></p>
+                            <p>ایده‌پردازی و توسعه کانسپت کامل برای یک رستوران با تم طبیعت‌گرا. این پروژه شامل نام‌گذاری، طراحی دکور، منو و استراتژی بازاریابی بود.</p>
+                            <p><strong>عناصر کلیدی:</strong></p>
+                            <ul>
+                                <li>نام برند: "سبزه‌زار"</li>
+                                <li>تم: ترکیب طبیعت و مدرنیته</li>
+                                <li>مخاطب هدف: جوانان ۲۵-۴۰ سال</li>
+                            </ul>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">ایده‌پردازی</span>
+                                <span class="tech-tag">برندینگ</span>
+                                <span class="tech-tag">کانسپت</span>
+                            </div>
+                        `;
+                        break;
+                }
+                
+                modalContent.innerHTML = content;
+                modal.style.display = 'flex';
+            }
             
             // افکت اسکرول
             const observerOptions = {
