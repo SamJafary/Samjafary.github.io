@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه کارها | سام جعفری</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%236a1b9a'/><text x='32' y='45' font-family='Arial' font-size='40' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+    <style>
+        /* استایل‌های خاص صفحه نمونه کارها */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: rgba(106, 27, 154, 0.3);
+            color: #e1bee7;
+            border: 2px solid #6a1b9a;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 1em;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #6a1b9a;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(106, 27, 154, 0.4);
+        }
+        
+        .portfolio-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .portfolio-item {
+            background: rgba(42, 42, 42, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            border: 2px solid #6a1b9a;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            border-color: #ba68c8;
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-content {
+            padding: 25px;
+        }
+        
+        .portfolio-title {
+            color: #e1bee7;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .portfolio-description {
+            color: #ba68c8;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background: rgba(106, 27, 154, 0.3);
+            color: #e1bee7;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            border: 1px solid #6a1b9a;
+        }
+        
+        .portfolio-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .portfolio-link {
+            background: #6a1b9a;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+            flex: 1;
+            text-align: center;
+        }
+        
+        .portfolio-link:hover {
+            background: #8e24aa;
+            transform: translateY(-2px);
+        }
+        
+        .portfolio-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        /* موبایل */
+        @media (max-width: 768px) {
+            .portfolio-gallery {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .portfolio-filters {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            
+            .portfolio-item:hover {
+                transform: translateY(-8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- بنر ایران -->
+    <div class="iran-banner">
+        <div class="iran-banner-content">
+            چو ایران نباشد تن من مباد
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="IMG_20251004_001653_727.jpg" alt="سام جعفری" class="profile-img">
+                <div class="logo-text">
+                    <div class="logo-name">سام جعفری</div>
+                    <div class="logo-title">طراح، ایده‌پرداز و سناریو نویس</div>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="portfolio.html">نمونه کارها</a></li>
+                <li><a href="about.html">درباره من</a></li>
+                <li><a href="contact.html">تماس</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>گالری نمونه کارها</h1>
+            <p class="tagline">مجموعه‌ای از خلاقیت‌ها و پروژه‌های من</p>
+        </header>
+
+        <!-- فیلتر دسته‌بندی -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">همه</button>
+            <button class="filter-btn" data-filter="design">طراحی</button>
+            <button class="filter-btn" data-filter="scenario">سناریو</button>
+            <button class="filter-btn" data-filter="idea">ایده‌پردازی</button>
+        </div>
+
+        <!-- گالری نمونه کارها -->
+        <div class="portfolio-gallery">
+            <!-- نمونه کار ۱: طراحی -->
+            <div class="portfolio-item" data-category="design">
+                <div class="portfolio-badge">طراحی</div>
+                <img src="design-sample.jpg" alt="نمونه طراحی" class="portfolio-image">
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">طراحی لوگو برند ورزشی</h3>
+                    <p class="portfolio-description">طراحی هویت بصری برای یک برند ورزشی با ترکیب المان‌های مدرن و پویا</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">فتوشاپ</span>
+                        <span class="tech-tag">ایلوستریتور</span>
+                        <span class="tech-tag">طراحی لوگو</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link">مشاهده جزئیات</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نمونه کار ۲: سناریو -->
+            <div class="portfolio-item" data-category="scenario">
+                <div class="portfolio-badge">سناریو</div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">سناریو تبلیغاتی کافه</h3>
+                    <p class="portfolio-description">نوشتن سناریوی خلاقانه برای کمپین تبلیغاتی یک کافه مدرن با رویکرد داستان‌محور</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">سناریونویسی</span>
+                        <span class="tech-tag">تبلیغات</span>
+                        <span class="tech-tag">داستان‌سرایی</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link">خواندن سناریو</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- نمونه کار ۳: ایده‌پردازی -->
+            <div class="portfolio-item" data-category="idea">
+                <div class="portfolio-badge">ایده‌پردازی</div>
+                <div class="portfolio-content">
+                    <h3 class="portfolio-title">کانسپت برندینگ رستوران</h3>
+                    <p class="portfolio-description">ایده‌پردازی و توسعه کانسپت کامل برای یک رستوران با تم طبیعت‌گرا</p>
+                    <div class="portfolio-tech">
+                        <span class="tech-tag">ایده‌پردازی</span>
+                        <span class="tech-tag">برندینگ</span>
+                        <span class="tech-tag">کانسپت</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="#" class="portfolio-link">مشاهده ایده</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-line footer-main">ساخت و توسعه توسط سام جعفری | Designed and Developed by Sam Jafary</div>
+            <div class="footer-line footer-date">January 2025</div>
+            <div class="footer-line footer-copyright">Copyright © 2025 SamJafary. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // فیلتر نمونه کارها
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // حذف کلاس active از همه دکمه‌ها
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // اضافه کردن کلاس active به دکمه کلیک شده
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // افکت اسکرول
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            portfolioItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
