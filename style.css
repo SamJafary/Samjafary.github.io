@@ -1,34 +1,29 @@
-/* تنظیمات عمومی */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Vazir', sans-serif;
-  background-image: url('background.jpg'); /* نام فایل تصویر */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, #a3d5ff, #1e3a5f);
   height: 100vh;
-  color: #f0f0f0; /* رنگ متن هماهنگ با تصویر */
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #ffffff;
 }
 
 /* محتوای وسط صفحه */
 .content {
-  background-color: rgba(0, 0, 0, 0.5); /* نیمه‌شفاف برای خوانایی متن */
+  background-color: rgba(30, 58, 95, 0.7); /* آبی تیره نیمه‌شفاف */
   padding: 40px;
   border-radius: 12px;
   text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   font-size: 3rem;
-  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 p {
   font-size: 1.5rem;
-  color: #dddddd;
 }
-
