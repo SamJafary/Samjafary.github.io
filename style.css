@@ -25,12 +25,23 @@ body {
 
 /* تصاویر سمت چپ و راست */
 .nav-left, .nav-right {
-  width: 50px;
+  width: 80px;
 }
 
 .nav-icon {
-  width: 100px;
   height: auto;
+}
+
+/* تصویر فروهر */
+.faravahar {
+  width: 70px;
+}
+
+/* تصویر لوگو */
+.logo {
+  width: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* لینک‌های وسط نوبار */
