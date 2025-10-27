@@ -27,3 +27,27 @@ h1 {
 p {
   font-size: 1.5rem;
 }
+.navbar {
+  background-color: #1e3a5f;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  color: #a3d5ff;
+}
