@@ -1,9 +1,8 @@
-/* فونت وزیر از CDN */
 @import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
 
 body {
   margin: 0;
-  padding-top: 80px; /* فاصله از نوبار بزرگ‌تر */
+  padding-top: 100px;
   font-family: 'Vazir', sans-serif;
   background: linear-gradient(to bottom, #a3d5ff, #1e3a5f);
   min-height: 100vh;
@@ -12,38 +11,48 @@ body {
 
 /* نوبار بالا */
 .navbar {
-  background-color: #000000; /* مشکی */
+  background-color: #000000;
   padding: 20px 30px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar ul {
+/* تصاویر سمت چپ و راست */
+.nav-left, .nav-right {
+  width: 50px;
+}
+
+.nav-icon {
+  width: 45px;
+  height: auto;
+}
+
+/* لینک‌های وسط نوبار */
+.nav-links {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 50px; /* فاصله بیشتر بین آیتم‌ها */
+  gap: 50px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
 }
 
-.navbar li {
-  display: inline;
-}
-
-.navbar a {
-  color: #7ec8ff; /* آبی روشن */
+.nav-links a {
+  color: #7ec8ff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #a3d5ff;
 }
 
@@ -55,20 +64,25 @@ body {
 
 /* ریسپانسیو برای موبایل */
 @media (max-width: 600px) {
-  .navbar ul {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-left, .nav-right {
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
     flex-direction: column;
     gap: 20px;
   }
 
-  .navbar {
-    padding: 15px;
-  }
-
-  .navbar a {
+  .nav-links a {
     font-size: 1rem;
   }
 
   body {
-    padding-top: 120px;
+    padding-top: 140px;
   }
 }
