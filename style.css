@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 80px;
   font-family: 'Vazir', sans-serif;
   background: linear-gradient(to bottom, #a3d5ff, #1e3a5f);
   min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 /* نوبار بالا */
 .navbar {
   background-color: #000000;
-  padding: 0.5px 20px;
+  padding: 12px 24px;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@ body {
 
 /* تصاویر سمت چپ و راست */
 .nav-left, .nav-right {
-  width: 80px;
+  width: 70px;
 }
 
 .nav-icon {
@@ -34,12 +34,14 @@ body {
 
 /* تصویر فروهر */
 .faravahar {
-  width: 180px;
+  width: 60px;
 }
 
 /* تصویر لوگو */
 .logo {
-  width: 80px;
+  width: 65px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 /* لینک‌های وسط نوبار */
@@ -47,7 +49,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -57,7 +59,7 @@ body {
   color: #7ec8ff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
