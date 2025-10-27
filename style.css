@@ -40,8 +40,6 @@ body {
 /* تصویر لوگو */
 .logo {
   width: 80px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 /* لینک‌های وسط نوبار */
