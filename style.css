@@ -43,7 +43,7 @@ body {
   font-size: 1rem;
   white-space: nowrap;
   animation: glowText 2s ease-in-out infinite alternate;
-  text-shadow: 0 0 10px #0063e7, 0 0 10px #ffd166;
+  text-shadow: 0 0 10px #0063e7, 0 0 15px  #0063e7;
   transition: transform 0.3s ease;
 }
 
