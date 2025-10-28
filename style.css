@@ -46,7 +46,7 @@ body {
 .logo-text {
   color: #7ec8ff;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 3rem;
   white-space: nowrap;
   animation: glowText 2s ease-in-out infinite alternate;
   text-shadow: 0 0 5px #7ec8ff, 0 0 10px #7ec8ff;
