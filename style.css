@@ -88,6 +88,11 @@ body {
   border-radius: 50px;           /* گرد کردن کامل */
   display: inline-block;
 }
+.nav-links a:hover {
+  background-color: rgba(126, 200, 255, 0.1); /* آبی روشن نیمه‌شفاف */
+  color: #a3d5ff;
+}
+
 
 .nav-links a:hover {
   color: #a3d5ff;
