@@ -82,7 +82,11 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border: 2px solid #7ec8ff;     /* دایره توخالی */
+  border-radius: 50px;           /* گرد کردن کامل */
+  display: inline-block;
 }
 
 .nav-links a:hover {
