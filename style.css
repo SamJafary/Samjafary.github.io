@@ -26,30 +26,24 @@ body {
   justify-content: space-between;
 }
 
-/* بخش چپ نوبار: لوگو و متن */
-.nav-left {
+/* لوگو سمت راست */
+.nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.nav-icon {
-  height: auto;
-}
-
-/* تصویر لوگو بدون بوردر */
 .logo {
   width: 65px;
 }
 
-/* متن کنار لوگو با افکت درخشان */
 .logo-text {
   color: #ffd166;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   white-space: nowrap;
   animation: glowText 2s ease-in-out infinite alternate;
-  text-shadow: 0 0 5px #7ec8ff, 0 0 10px #7ec8ff;
+  text-shadow: 0 0 5px #ffd166, 0 0 10px #ffd166;
   transition: transform 0.3s ease;
 }
 
@@ -59,10 +53,10 @@ body {
 
 @keyframes glowText {
   from {
-    text-shadow: 0 0 5px #7ec8ff, 0 0 10px #7ec8ff;
+    text-shadow: 0 0 5px #ffd166, 0 0 10px #ffd166;
   }
   to {
-    text-shadow: 0 0 10px #a3d5ff, 0 0 20px #a3d5ff;
+    text-shadow: 0 0 10px #ffe599, 0 0 20px #ffe599;
   }
 }
 
@@ -71,7 +65,7 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -81,20 +75,18 @@ body {
   color: #7ec8ff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border: 2px solid #7ec8ff;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: all 0.3s ease;
-  padding: 8px 16px;
-  border: 2px solid #7ec8ff;     /* دایره توخالی */
-  border-radius: 50px;           /* گرد کردن کامل */
-  display: inline-block;
-}
-.nav-links a:hover {
-  background-color: rgba(126, 200, 255, 0.1); /* آبی روشن نیمه‌شفاف */
-  color: #a3d5ff;
 }
 
-
 .nav-links a:hover {
+  background-color: rgba(126, 200, 255, 0.1);
   color: #a3d5ff;
 }
 
@@ -111,7 +103,7 @@ body {
     padding: 15px;
   }
 
-  .nav-left {
+  .nav-logo {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
@@ -119,11 +111,11 @@ body {
 
   .nav-links {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
 
   .nav-links a {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .logo-text {
