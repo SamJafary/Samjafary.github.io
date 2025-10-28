@@ -26,7 +26,7 @@ body {
   justify-content: space-between;
 }
 
-/* متن سمت راست نوبار */
+/* متن سمت راست */
 .nav-text {
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@ body {
   }
 }
 
-/* لوگو وسط نوبار */
+/* لوگو وسط */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -66,11 +66,11 @@ body {
   width: 65px;
 }
 
-/* لینک‌های وسط نوبار */
+/* لینک‌ها سمت چپ */
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
   margin: 0;
   padding: 0;
@@ -118,6 +118,7 @@ body {
   .nav-links {
     flex-direction: column;
     gap: 15px;
+    align-items: center;
   }
 
   .nav-links a {
