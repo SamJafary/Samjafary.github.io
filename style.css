@@ -44,8 +44,6 @@ body {
 /* تصویر لوگو */
 .logo {
   width: 65px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 /* لینک‌های وسط نوبار */
