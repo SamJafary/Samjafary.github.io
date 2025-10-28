@@ -26,15 +26,11 @@ body {
   justify-content: space-between;
 }
 
-/* تصاویر سمت چپ و راست */
+/* بخش‌های چپ و راست نوبار */
 .nav-left, .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.nav-right {
-  flex-direction: row-reverse;
 }
 
 .nav-icon {
