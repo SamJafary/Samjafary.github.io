@@ -43,7 +43,7 @@ body {
   font-size: 1rem;
   white-space: nowrap;
   animation: glowText 2s ease-in-out infinite alternate;
-  text-shadow: 0 0 10px #0063e7, 0 0 15px  #0063e7;
+  text-shadow: 0 0 8px #7ec8ff, 0 0 16px #7ec8ff, 0 0 24px #7ec8ff;
   transition: transform 0.3s ease;
 }
 
@@ -53,12 +53,13 @@ body {
 
 @keyframes glowText {
   from {
-    text-shadow: 0 0 5px #ffd166, 0 0 10px #ffd166;
+    text-shadow: 0 0 8px #7ec8ff, 0 0 16px #7ec8ff;
   }
   to {
-    text-shadow: 0 0 10px #ffe599, 0 0 20px #ffe599;
+    text-shadow: 0 0 12px #a3d5ff, 0 0 24px #a3d5ff;
   }
 }
+
 
 /* لینک‌ها وسط */
 .nav-links {
