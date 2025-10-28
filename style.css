@@ -33,13 +33,17 @@ body {
   gap: 10px;
 }
 
+.nav-right {
+  flex-direction: row-reverse;
+}
+
 .nav-icon {
   height: auto;
 }
 
 /* تصویر فروهر */
 .faravahar {
-  width: 80px;
+  width: 60px;
 }
 
 /* تصویر لوگو بدون بوردر */
@@ -47,12 +51,28 @@ body {
   width: 65px;
 }
 
-/* متن کنار لوگو */
+/* متن کنار لوگو با افکت درخشان */
 .logo-text {
   color: #7ec8ff;
   font-weight: bold;
   font-size: 1rem;
   white-space: nowrap;
+  animation: glowText 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 5px #7ec8ff, 0 0 10px #7ec8ff;
+  transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+  transform: scale(1.05);
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #7ec8ff, 0 0 10px #7ec8ff;
+  }
+  to {
+    text-shadow: 0 0 10px #a3d5ff, 0 0 20px #a3d5ff;
+  }
 }
 
 /* لینک‌های وسط نوبار */
@@ -108,6 +128,8 @@ body {
 
   .logo-text {
     font-size: 0.9rem;
+    animation: none;
+    text-shadow: none;
   }
 
   body {
