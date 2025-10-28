@@ -4,12 +4,12 @@ body {
   margin: 0;
   padding-top: 80px;
   font-family: 'Vazir', sans-serif;
-  background-image: url('background.jpg'); /* تصویر زمینه دلخواه */
+  min-height: 100vh;
+  color: #ffffff;
+  background-image: url('background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  color: #ffffff;
 }
 
 /* نوبار بالا */
@@ -39,36 +39,20 @@ body {
 
 /* تصویر فروهر */
 .faravahar {
-  width: 60px;
+  width: 80px;
 }
 
-/* تصویر لوگو */
+/* تصویر لوگو بدون بوردر */
 .logo {
   width: 65px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* متن کنار لوگو با افکت تایپ */
+/* متن کنار لوگو */
 .logo-text {
   color: #7ec8ff;
   font-weight: bold;
   font-size: 1rem;
   white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #7ec8ff;
-  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
-}
-
-/* افکت تایپ */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent }
-  50% { border-color: #7ec8ff }
 }
 
 /* لینک‌های وسط نوبار */
