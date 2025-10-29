@@ -1,4 +1,5 @@
 @import url('https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
 body {
   margin: 0;
@@ -34,11 +35,11 @@ body {
 }
 
 .logo {
-  width: 40px;
+  width: 32px;
 }
 
 .logo-text {
-  color: #ffd166;
+  color: #7ec8ff;
   font-weight: bold;
   font-size: 1rem;
   white-space: nowrap;
@@ -60,7 +61,6 @@ body {
   }
 }
 
-
 /* لینک‌ها وسط */
 .nav-links {
   list-style: none;
@@ -78,7 +78,7 @@ body {
   font-weight: bold;
   font-size: 0.95rem;
   padding: 6px 12px;
-  border: 2px solid #ffd166;
+  border: 2px solid #7ec8ff;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
