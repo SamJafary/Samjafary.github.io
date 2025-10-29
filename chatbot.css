@@ -28,12 +28,13 @@ body {
 
 .logo-text {
   font-weight: bold;
-  color: #ffd166;
+  color: #7ec8ff;
   font-size: 1rem;
+  text-shadow: 0 0 8px #7ec8ff, 0 0 16px #7ec8ff;
 }
 
 .back-link {
-  color: #7ec8ff;
+  color: #ffd166;
   text-decoration: none;
   font-weight: bold;
 }
@@ -79,40 +80,4 @@ body {
 .chat-input {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  font-size: 0.95rem;
-}
-
-.chat-input button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: none;
-  background-color: #ffd166;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 0.95rem;
-}
-
-/* ریسپانسیو برای موبایل */
-@media (max-width: 600px) {
-  .chat-container {
-    padding: 10px;
-  }
-
-  .chat-input input,
-  .chat-input button {
-    font-size: 0.85rem;
-  }
-
-  .logo-text {
-    font-size: 0.9rem;
-  }
-}
+  margin-top
