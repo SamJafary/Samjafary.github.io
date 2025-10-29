@@ -1,29 +1,32 @@
-<!DOCTYPE html>
-<html lang="fa">
+<<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>چت‌بات | سام جعفری</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>چت‌بات سام جعفری</title>
+  <link rel="stylesheet" href="chatbot.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
+
   <nav class="navbar">
-    <div class="nav-left">
-      <img src="faravahar.png" alt="فروهر" class="nav-icon faravahar">
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">خانه</a></li>
-      <li><a href="chatbot.html">چت‌بات</a></li>
-      <li><a href="portfolio.html">نمونه‌کارها</a></li>
-      <li><a href="contact.html">تماس</a></li>
-    </ul>
     <div class="nav-right">
-      <img src="logo.png" alt="لوگوی سام جعفری" class="nav-icon logo">
+      <img src="favicon.png" alt="لوگو" class="logo" />
+      <span class="logo-text">چت‌بات سام جعفری</span>
     </div>
+    <a href="index.html" class="back-link">بازگشت</a>
   </nav>
 
-  <div class="content">
-    <h1>درباره من</h1>
-    <p>سلام! من سام جعفری هستم، توسعه‌دهنده وب و علاقه‌مند به هوش مصنوعی. این صفحه به‌زودی با چت‌باتی هوشمند تکمیل می‌شه که به سوالات شما درباره من پاسخ می‌ده.</p>
-  </div>
+  <main class="chat-container">
+    <div class="chat-box" id="chat-box">
+      <div class="bot-message">سلام! من چت‌بات سام هستم. چطور می‌تونم کمکت کنم؟</div>
+    </div>
+    <form class="chat-input" onsubmit="sendMessage(event)">
+      <input type="text" id="user-input" placeholder="پیامت رو بنویس..." required />
+      <button type="submit">ارسال</button>
+    </form>
+  </main>
+
+  <script src="chatbot.js"></script>
 </body>
 </html>
