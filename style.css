@@ -617,4 +617,474 @@ section {
 }
 
 .skill-card p {
-    color: var(--gray
+    color: var(--gray-dark);
+    font-size: 14px;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    background: linear-gradient(to bottom, var(--black-light), var(--black));
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-image {
+    position: relative;
+    padding-top: 60%;
+    background: rgba(16,185,129,0.05);
+    overflow: hidden;
+}
+
+.image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: rgba(16,185,129,0.3);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16,185,129,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link,
+.project-github {
+    width: 55px;
+    height: 55px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 20px;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-link,
+.project-item:hover .project-github {
+    transform: translateY(0);
+}
+
+.project-link:hover,
+.project-github:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.project-info {
+    padding: 30px;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--gray-dark);
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tags span {
+    padding: 6px 16px;
+    background: rgba(16,185,129,0.1);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(16,185,129,0.3);
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    background: var(--black);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+.contact-info-card,
+.contact-form-card {
+    padding: 40px;
+}
+
+.contact-info-card h3,
+.contact-form-card h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon {
+    width: 55px;
+    height: 55px;
+    background: rgba(16,185,129,0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.info-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: var(--gray-dark);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    color: var(--white);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(16,185,129,0.05);
+    box-shadow: 0 0 0 4px rgba(16,185,129,0.1);
+}
+
+.form-group i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-dark);
+    transition: all 0.3s ease;
+}
+
+.form-group textarea ~ i {
+    top: 25px;
+    transform: none;
+}
+
+.form-group input:focus + i,
+.form-group textarea:focus + i {
+    color: var(--primary);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(to top, var(--black), var(--black-light));
+    padding: 60px 0;
+    border-top: 1px solid rgba(16,185,129,0.1);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    color: var(--gray-dark);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-text i {
+    color: var(--primary);
+}
+
+.copyright {
+    color: var(--gray-dark);
+    font-size: 14px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(16,185,129,0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 50px rgba(16,185,129,0.5);
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        height: 60px;
+        opacity: 1;
+    }
+    50% {
+        height: 30px;
+        opacity: 0.5;
+    }
+    100% {
+        height: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .title-name {
+        font-size: 60px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(10,10,10,0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: 0.3s;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+    
+    .title-name {
+        font-size: 48px;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        justify-content: center;
+    }
+    
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    .title-name {
+        font-size: 36px;
+    }
+    
+    .hero-desc {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .about-card,
+    .contact-info-card,
+    .contact-form-card {
+        padding: 30px;
+    }
+    
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
