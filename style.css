@@ -41,7 +41,7 @@ html {
 
 body {
     font-family: 'Vazir', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--black);
+    background: var(--black);  /* اینو از white به black تغییر بده */
     color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
@@ -433,25 +433,19 @@ section {
 
 /* ===== GLASS CARD ===== */
 .glass {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.03);  /* شیشه‌ای مشکی */
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 24px;
-    transition: all 0.3s ease;
 }
-
 .glass:hover {
     background: rgba(255,255,255,0.05);
     border-color: rgba(16,185,129,0.3);
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-colored);
 }
-
 /* ===== ABOUT SECTION ===== */
 .about {
     background: linear-gradient(to bottom, var(--black), var(--black-light));
+    /* قبلاً بود: background: #f9f9f9; */
 }
-
 .about-card {
     padding: 50px;
 }
@@ -691,8 +685,9 @@ section {
 
 /* ===== SKILLS SECTION ===== */
 .skills {
-    background: var(--black);
+    background: var(--black);  /* مشکی خالص */
 }
+
 
 .skills-grid {
     display: grid;
@@ -763,7 +758,6 @@ section {
 .projects {
     background: linear-gradient(to bottom, var(--black-light), var(--black));
 }
-
 .project-filters {
     display: flex;
     justify-content: center;
@@ -888,9 +882,8 @@ section {
 }
 /* ===== CONTACT SECTION ===== */
 .contact {
-    background: var(--black);
+    background: var(--black);  /* مشکی خالص */
 }
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
