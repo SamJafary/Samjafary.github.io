@@ -1,92 +1,463 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پورتفولیوی من</title>
+    <title>پورتفولیو | طراح وب حرفه‌ای</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- نوار بالایی -->
-    <nav>
-        <div class="container">
-            <h1 class="logo">پورتفولیو</h1>
-            <ul>
-                <li><a href="#home">خانه</a></li>
-                <li><a href="#about">درباره من</a></li>
+    <!-- پیش‌نمایش لودینگ -->
+    <div class="loader">
+        <div class="emerald"></div>
+    </div>
+
+    <!-- ناوبری لوکس -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">P</span>
+                <span class="logo-full">ورتفولیو</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">خانه</a></li>
+                <li><a href="#about">درباره</a></li>
+                <li><a href="#skills">مهارت‌ها</a></li>
                 <li><a href="#projects">پروژه‌ها</a></li>
                 <li><a href="#contact">تماس</a></li>
             </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
-    <!-- صفحه اصلی -->
+    <!-- صفحه اصلی - هدر شیشه‌ای -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>سلام! من <span class="highlight">[اسم شما]</span> هستم</h2>
-                <p>توسعه‌دهنده و طراح وب</p>
-                <a href="#projects" class="btn">مشاهده پروژه‌ها</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge">طراح و توسعه‌دهنده وب</span>
             </div>
+            <h1 class="hero-title">
+                <span class="title-line">سلام، من</span>
+                <span class="title-name">علی رضایی</span>
+                <span class="title-line">هستم</span>
+            </h1>
+            <div class="hero-desc">
+                <p>متخصص در طراحی سایت‌های مدرن و خلاقانه</p>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>مشاهده پروژه‌ها</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>ارتباط با من</span>
+                    <i class="fas fa-comment"></i>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>اسکرول</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- درباره من -->
+    <!-- درباره من - کارت شیشه‌ای -->
     <section id="about" class="about">
         <div class="container">
-            <h2>درباره من</h2>
+            <div class="section-header">
+                <span class="section-subtitle">معرفی</span>
+                <h2 class="section-title">درباره من</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fas fa-gem decoration-icon"></i>
+                    <span class="decoration-line"></span>
+                </div>
+            </div>
+            
             <div class="about-content">
-                <div class="about-text">
-                    <p>سلام! من [اسم شما] هستم، یک توسعه‌دهنده وب با علاقه به طراحی سایت‌های زیبا و کاربردی.</p>
-                    <p>مهارت‌های من:</p>
-                    <ul>
-                        <li>HTML و CSS</li>
-                        <li>JavaScript</li>
-                        <li>طراحی ریسپانسیو</li>
-                    </ul>
+                <div class="about-card glass">
+                    <div class="about-grid">
+                        <div class="about-info">
+                            <div class="info-header">
+                                <i class="fas fa-code info-icon"></i>
+                                <h3>علی رضایی</h3>
+                                <span class="info-badge">3+ سال تجربه</span>
+                            </div>
+                            <p class="about-text">
+                                من یک توسعه‌دهنده وب خلاق هستم که عاشق خلق تجربه‌های دیجیتال زیبا و کاربرپسندم. 
+                                با ترکیب هنر طراحی و قدرت کدنویسی، وبسایت‌هایی می‌سازم که نه تنها چشم‌نواز هستند، 
+                                بلکه عملکرد فوق‌العاده‌ای دارند.
+                            </p>
+                            <div class="about-stats">
+                                <div class="stat">
+                                    <span class="stat-number">50+</span>
+                                    <span class="stat-label">پروژه</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">30+</span>
+                                    <span class="stat-label">مشتری</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">3+</span>
+                                    <span class="stat-label">سال</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-features">
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>طراحی ریسپانسیو</h4>
+                                    <p>نمایش عالی در همه دستگاه‌ها</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>سرعت بالا</h4>
+                                    <p>بهینه‌سازی شده برای عملکرد سریع</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>طراحی خلاقانه</h4>
+                                    <p>رابط کاربری منحصربفرد</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- پروژه‌ها -->
+    <!-- مهارت‌ها - کارت‌های کریستالی -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">تخصص من</span>
+                <h2 class="section-title">مهارت‌های حرفه‌ای</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fas fa-crown decoration-icon"></i>
+                    <span class="decoration-line"></span>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;"></div>
+                        </div>
+                        <span class="percentage">95%</span>
+                    </div>
+                    <p>ساختاردهی حرفه‌ای وبسایت</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                        <span class="percentage">90%</span>
+                    </div>
+                    <p>طراحی زیبا و ریسپانسیو</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                    <p>تعاملی و پویا</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                        <span class="percentage">80%</span>
+                    </div>
+                    <p>کامپوننت‌های مدرن</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-node"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                        <span class="percentage">75%</span>
+                    </div>
+                    <p>بک‌اند قدرتمند</p>
+                </div>
+
+                <div class="skill-card glass">
+                    <div class="skill-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h3>Figma</h3>
+                    <div class="skill-level">
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                        <span class="percentage">85%</span>
+                    </div>
+                    <p>طراحی رابط کاربری</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- پروژه‌ها - گالری لوکس -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>پروژه‌های من</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>پروژه ۱</h3>
-                    <p>توضیحات پروژه اول</p>
+            <div class="section-header">
+                <span class="section-subtitle">نمونه کارها</span>
+                <h2 class="section-title">پروژه‌های اخیر</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fas fa-star decoration-icon"></i>
+                    <span class="decoration-line"></span>
                 </div>
-                <div class="project-card">
-                    <h3>پروژه ۲</h3>
-                    <p>توضیحات پروژه دوم</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="web">وبسایت</button>
+                <button class="filter-btn" data-filter="app">اپلیکیشن</button>
+                <button class="filter-btn" data-filter="design">طراحی</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-item glass" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>فروشگاه آنلاین</h3>
+                        <p>وبسایت فروشگاهی با طراحی مدرن</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>پروژه ۳</h3>
-                    <p>توضیحات پروژه سوم</p>
+
+                <div class="project-item glass" data-category="app">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>اپلیکیشن آب‌وهوا</h3>
+                        <p>پیش‌بینی آب‌وهوا با API</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass" data-category="design">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ردیف موسیقی</h3>
+                        <p>طراحی پلیر موسیقی مدرن</p>
+                        <div class="project-tags">
+                            <span>UI/UX</span>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item glass" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>داشبورد مدیریت</h3>
+                        <p>پنل مدیریت پیشرفته</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- تماس با من -->
+    <!-- تماس با من - فرم شیشه‌ای -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>تماس با من</h2>
-            <div class="contact-info">
-                <p>📧 ایمیل: example@gmail.com</p>
-                <p>📱 تلفن: ۰۹۱۲۳۴۵۶۷۸۹</p>
-                <p>📍 شهر: تهران</p>
+            <div class="section-header">
+                <span class="section-subtitle">ارتباط</span>
+                <h2 class="section-title">با من در تماس باشید</h2>
+                <div class="title-decoration">
+                    <span class="decoration-line"></span>
+                    <i class="fas fa-envelope decoration-icon"></i>
+                    <span class="decoration-line"></span>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-card glass">
+                    <h3>اطلاعات تماس</h3>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-detail">
+                                <span class="info-label">آدرس</span>
+                                <span class="info-value">تهران، ایران</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-detail">
+                                <span class="info-label">ایمیل</span>
+                                <span class="info-value">ali.rezaei@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-detail">
+                                <span class="info-label">تلفن</span>
+                                <span class="info-value">+۹۸ ۹۱۲ ۳۴۵ ۶۷۸۹</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form-card glass">
+                    <h3>ارسال پیام</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="نام شما">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="ایمیل شما">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="موضوع">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="پیام شما" rows="5"></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>ارسال پیام</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- فوتر -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>© ۲۰۲۴ - تمام حقوق محفوظ است</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">P</span>
+                    <span class="logo-full">ورتفولیو</span>
+                </div>
+                <p class="footer-text">طراحی شده با <i class="fas fa-heart"></i> توسط علی رضایی</p>
+                <p class="copyright">© ۲۰۲۴ - تمام حقوق محفوظ است</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
