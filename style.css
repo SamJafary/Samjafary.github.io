@@ -147,12 +147,10 @@ body {
     position: relative;
     transition: all 0.3s ease;
 }
-/* استایل عکس لوگو */
 .logo-image {
-    width: 50px;        /* عرض دلخواه */
-    height: 50px;       /* ارتفاع دلخواه */
-    object-fit: contain; /* حفظ تناسب عکس */
-    transition: all 0.3s ease;
+    width: 55px;
+    height: 55px;
+    filter: drop-shadow(0 5px 15px rgba(16,185,129,0.3));
 }
 
 .logo:hover .logo-image {
