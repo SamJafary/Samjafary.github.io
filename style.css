@@ -147,6 +147,17 @@ body {
     position: relative;
     transition: all 0.3s ease;
 }
+/* استایل عکس لوگو */
+.logo-image {
+    width: 50px;        /* عرض دلخواه */
+    height: 50px;       /* ارتفاع دلخواه */
+    object-fit: contain; /* حفظ تناسب عکس */
+    transition: all 0.3s ease;
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.1); /* بزرگ‌تر شدن لوگو وقتی موس می‌بری */
+}
 
 .nav-menu a::after {
     content: '';
