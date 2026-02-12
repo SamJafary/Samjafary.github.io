@@ -309,9 +309,9 @@ body {
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: var(--white);
+    color: #000000
     box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    text-shadow: none;
 }
 
 .btn-primary:hover {
